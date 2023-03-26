@@ -1,0 +1,23 @@
+﻿@using Small_Task.Models;
+@model Users
+
+<body>
+    <div>
+        <form method="post">
+            
+            <label asp-for="UserName"></label>
+            <br />
+            <input type="text" asp-for="UserName" />
+            <br>
+            <span asp-validation-for="UserName"></span>
+
+            <input type="submit" value="Submit" />
+        </form>
+        @if (Model != null)
+        {
+            <label>
+                @($"Hello, {Model.UserName}!")
+            </label>
+        }
+    </div>
+</body>
